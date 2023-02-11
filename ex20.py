@@ -41,13 +41,13 @@ print_a_line(current_line, current_file)
 #     print(current_line, test.txt.readline(1))
 
 # defines the variable current_line again, using the previous variable plus 1, and calling the same print_a_line function
-current_line = current_line + 1
+current_line += 1
 print_a_line(current_line, current_file)
 # print_a_line(current_line, test.txt):
 #     print(current_line, test.txt.readline(2))
 
 # defines the variable current_line again, using the previous variable plus 1, and calling the same print_a_line function
-current_line = current_line + 1
+current_line += 1
 print_a_line(current_line, current_file)
 # print_a_line(current_line, test.txt):
 #     print(current_line, test.txt.readline(3))
