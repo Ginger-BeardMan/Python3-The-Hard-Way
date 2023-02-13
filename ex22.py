@@ -91,3 +91,51 @@ print(f"His teeth are usually {my_teeth} depending on the coffee.") # Prints a s
 # this line is tricky, try to get it exactly right
 total = my_age + my_height + my_weight # Creates a variable 'total' and assigns the combined numbers of my_age, my_height, and my_weight
 print(f"If I add {my_age}, {my_height}, and {my_weight} I get {total}.") # Prints a string utilizing 'format' to embed my_age, my_height, my_weight, and total within the string quotes. 
+
+# ex6
+
+types_of_people = 10 # Creates a variable and assigns it a number
+x = f"There are {types_of_people} types of people." # Creates a variable and assigns it a string with the format command and types_of_people embeded within the string quotes
+
+binary = "binary" # Creates the variable binary and assigns it a string
+do_not = "don't" # Creates the variable do_not and assigns it a string
+y = f"Those who know {binary} and those who {do_not}." # Creates a variable and assigns it a string with the format command and both binary and do_not embeded within the string quotes
+
+print(x) # Prints the variable x
+print(y) # Prints the variable y
+
+print(f"I said: {x}") # Prints a formated string to include the variable x embeded within
+print(f"I also said: '{y}'") # Prints a formated string to include the variable y embeded within
+
+hilarious = False # Creates a variable and assigns it the boolean false
+joke_evaluation = "Isn't that joke so funny?! {}" # Creates a variable and assigns it a string with an emtpy format bracket
+
+print(joke_evaluation.format(hilarious)) # Prints the joke_evaluation string, formatted to include the variable hilarious
+
+w = "This is the left side of..." # Creates a variable and assigns it a string
+e = "a string with a right side." # Creates a variable and assigns it a string
+
+print(w + e) # Prints a string that is the combination of the variables w and e
+
+# ex7
+
+print("Mary had a little lamb.") # Prints a string
+print("It's fleece was white as {}.".format('snow')) # Prints a string using the format command to insert 'snow' within the string quotes
+print("And everywhere that Mary went.") # Prints a string
+print("." * 10) # Prints 10 periods
+
+end1 = "C" # Creates the variable end1 and assigns it a string
+end2 = "h" # Creates the variable end2 and assigns it a string
+end3 = "e" # Creates the variable end3 and assigns it a string
+end4 = "e" # Creates the variable end4 and assigns it a string
+end5 = "s" # Creates the variable end5 and assigns it a string
+end6 = "e" # Creates the variable end6 and assigns it a string
+end7 = "B" # Creates the variable end7 and assigns it a string
+end8 = "u" # Creates the variable end8 and assigns it a string
+end9 = "r" # Creates the variable end9 and assigns it a string
+end10 = "g" # Creates the variable end10 and assigns it a string
+end11 = "e" # Creates the variable end11 and assigns it a string
+end12 = "r" # Creates the variable end12 and assigns it a string
+
+print(end1 + end2 + end3 + end4 + end5 + end6, end=' ') # Prints a combination of variables in to a string with a space at the end
+print(end7 + end8 + end9 + end10 + end11 + end12) # Prints a combination of variables in to a string
