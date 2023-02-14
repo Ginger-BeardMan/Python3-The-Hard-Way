@@ -139,3 +139,81 @@ end12 = "r" # Creates the variable end12 and assigns it a string
 
 print(end1 + end2 + end3 + end4 + end5 + end6, end=' ') # Prints a combination of variables in to a string with a space at the end
 print(end7 + end8 + end9 + end10 + end11 + end12) # Prints a combination of variables in to a string
+
+# ex8
+
+formatter = "{} {} {} {}" # Creates a variable with 4 brackets that can be formatted
+
+print(formatter.format(1, 2, 3, 4)) # Prints the formatter string using the format function to make it 1, 2, 3, 4
+print(formatter.format("one", "two", "three", "four")) # Prints the formatter string using the format function to make it "one", "two", "three", "four"
+print(formatter.format(True, False, False, True)) # Prints the formatter string using the format function to make it True False False True
+print(formatter.format(formatter, formatter, formatter, formatter)) # Prints the formatter string using the format function to print formatter four times
+print(formatter.formate(
+	"Bee bee",
+	"Naa naa",
+	"Koo koo",
+	"See saw"
+)) # Prints the formatter string using the format function to print four seperate lines of strings
+
+# ex9
+
+days = "Mon Tue Wed Thu Fri Sat Sun" # Creates a variable 'days' and assigns it a string
+months = "Jan\nFeb\nMar\nApr\nMay\nJun\nJyl\nAug" # Creates a variable months and assigns it a string with new line characters (\n)
+
+print("Here are the days: ", days) # Prints a string that includes the variable days
+print("Here are the months: ", months) # Prints a string that includes the variable months
+
+print("""
+There's something going on here.
+With the three double-quotes.
+We'll be able to type as much as we like.
+Even 4 lines if we want, or 5, or 6.
+""") # Prints a string that spans across multiple lines due to the usage of triple quotes
+
+# ex10
+
+tabby_cat = "\tI'm tabbed in." # Creates a variable and assigns it a string that will be indented using the tab command (\t)
+persian_cat = "I'm split\non a line." # Creates a variable and assigns it a string that will be seperated across two lines using the new line command (\n)
+backslash_cat = "I'm \\ a \\ cat." # Creates a variable and assigns it a string that will have backslashes between each word
+
+fat_cat = """
+I'll do a list:
+\t* Cat food
+\t* Fishies
+\t* Catnip\n\t* Grass
+""" # Creates a variable and assigns it a string that will make a list that is indended using the tab command \t and new line command \n
+
+print(tabby_cat) # Prints the variable tabby_cat
+print(persian_cat) # Prints the variable persian_cat
+print(backslash_cat) # Prints the variable backslash_cat
+print(fat_cat) # Prints the variable fat_cat
+
+# ex11
+
+print("How old are you?", end=' ') # Prints a string with a space at the end
+age = input() # Asks the user/viewer to input the requested information and assigns it to a variable
+print("How tall are you?", end=' ') # Prints a string with a space at the end
+height = input() # Asks the user/viewer to input the requested information and assigns it to a variable
+print("How much do you weight?", end=' ') # Prints a string with a space at the end
+weight = input() # Asks the user/viewer to input the requested information and assigns it to a variable
+
+print(f"So, you're {age} old, {height} tall and {weight} heavy.") # Prints a string using the formatted function (f) to include the inputed information of age, height, and weight
+
+# ex12
+
+age = input("How old are you? ") # Creates a variable (age) and prompts the user with a question, assigning the inputted information to the variable
+height = input("How tall are you? ") # Creates a variable (height) and prompts the user with a question, assigning the inputted information to the variable
+weight = input("How much do you weigh? ") # Creates a variable (weight) and prompts the user with a question, assigning the inputted information to the variable
+
+print(f"So, you're {age} old, {height} tall and {weight} heavy.") # Prints a string using the formatted function (f) to include the inputed information of age, height, and weight
+
+# ex13
+
+from sys import argv # From the system, imports the argument variable (argv) which 'holds' your arguments that are passed to the script when running it
+
+script, first, second, third = argv # These are the command line arguments that are passed in to the script when launching it
+ 
+print("The script is called:", script) # Prints a string with the name of the script (The file that your script is saved on)
+print("Your first variable is:", first) # Prints a string with the name of the first command line argument after the script name
+print("Your second variable is:", second) # Prints a string with the name of the second command line argument after the script name
+print("Your third variable is:", third) # Prints a string with the name of the second command line argument after the script name
