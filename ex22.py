@@ -217,3 +217,45 @@ print("The script is called:", script) # Prints a string with the name of the sc
 print("Your first variable is:", first) # Prints a string with the name of the first command line argument after the script name
 print("Your second variable is:", second) # Prints a string with the name of the second command line argument after the script name
 print("Your third variable is:", third) # Prints a string with the name of the second command line argument after the script name
+
+# ex14
+
+from sys import argv # From the system, imports the argument variable (argv) which 'holds' your arguments that are passed to the script when running it
+
+script, user_name = argv # These are the command line arguments that are passed in to the script when launching the script
+prompt = '> ' # A prompt to insert user_name which is assigned to the variable
+
+print(f"Hi {user_name}, I'm the {script} script.") # Prints a string that uses the format function to include {user_name} and {script}
+print("I'd like to ask you a few questions.") # Prints a script
+print(f"Do you like me {user_name}?") # Prints a string that uses the format function to include {user_name}
+likes = input(prompt) # Displays a prompt and allows the user to input information that is assigned to the variable likes
+
+print(f"Where do you live {user_name}?") # Prints a string that uses the format function to include {user_name}
+lives = input(prompt) # Displays a prompt and allows the user to input information that is assigned to the variable lives
+
+print("What kind of computer do you have?") # Prints a string
+computer = input(prompt) # Displays a prompt and allows the user to input information that is assigned to the variable computer
+
+print(f"""
+Alright, so you said {likes} about liking me.
+You live in {lives}. Not sure where that is.
+And you have a {computer} computer. Nice.
+""") # Prints a multi-line string that uses the format function to include the variables likes, lives, and computer
+
+# ex15
+
+from sys import argv
+
+script, filename = argv
+
+txt = open(filename)
+
+print(f"Here's your file {filename}")
+print(txt.read())
+
+print("Type the filename again:")
+file_again = input("> ")
+
+txt_again = open(file_again)
+
+print(txt_again.read())
