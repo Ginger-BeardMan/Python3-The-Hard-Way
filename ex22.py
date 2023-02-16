@@ -244,18 +244,83 @@ And you have a {computer} computer. Nice.
 
 # ex15
 
-from sys import argv
+from sys import argv # From the system import the argument variable (argv) which holds your arguments that are passed to the script
 
-script, filename = argv
+script, filename = argv # Indicates items to be passed in to the argument variable (the script name and the file name that is seperate from the py file)
 
-txt = open(filename)
+txt = open(filename) # Creating a variable, txt, and assigning it the file and using the open() function (it opens the file in the 'background')
 
-print(f"Here's your file {filename}")
-print(txt.read())
+print(f"Here's your file {filename}") # Prints a formatted (f) string which includes the 'filename' within the quote strings
+print(txt.read()) # Prints the opened file (open(filename)) which was assigned to txt. This is printed using .read() 
 
-print("Type the filename again:")
-file_again = input("> ")
+print("Type the filename again:") # Prints a string
+file_again = input("> ") # Creates a variable file_again and assigns whichever new file is input when the user is prompted
 
-txt_again = open(file_again)
+txt_again = open(file_again) # Creates a variable 'txt_again' and assigns it the variable 'file_again' that has been opened using the open() function
 
-print(txt_again.read())
+print(txt_again.read()) # Prints the txt_again variable using the .read() function
+
+# ex16
+
+from sys import argv # From the system import the argument variable (argv)
+
+script, filename = argv # Assigns the command line variables to the argument variable for the script
+
+print(f"We're going to erase {filename}.") # Prints a formatted script (f) that includes the name of the file input on the command line
+print("If you don't want that, hit CTRL-C (^C).") # Prints a script
+print("If you do want that, hit RETURN.") # Prints a script
+
+input("?") # Prints a script along with allowing the user to input their command (RETURN OR CTRL-C based on the previous scripts)
+
+print("Opening the file...") # Prints a string
+target = open(filename, 'w') # Creates a variable (target) and assigns it the opened file along with putting the file in "write" mode ('w')
+
+print("Truncating the file. Goodbye!") # Prints a string
+target.truncate() # Takes the 'target' variable and resizes it (aka truncates it). The size does not change, however, because no size change is specified with the ()
+
+print("Now I'm going to ask you for three lines.") # Prints a string
+
+line1 = input("line 1: ") # Prints a string along with an input prompt for the user to add a new line which is assigned to the line1 variable
+line2 = input("line 2: ") # Prints a string along with an input prompt for the user to add a new line which is assigned to the line2 variable
+line3 = input("line 3: ") # Prints a string along with an input prompt for the user to add a new line which is assigned to the line3 variable
+
+print("I'm going to write these to the file.") # Prints a string
+
+target.write(line1) # Takes the target variable an writes in the string input in the line1 variable to the file use in this script ('filename')
+target.write('\n') # Indicates that the next string will be placed on a new line
+target.write(line2) # Takes the target variable an writes in the string input in the line2 variable to the file use in this script ('filename')
+target.write('\n') # Indicates that the next string will be placed on a new line
+target.write(line3) # Takes the target variable an writes in the string input in the line3 variable to the file use in this script ('filename')
+target.write('\n') # Indicates that the next string will be placed on a new line
+
+print("And finally, we close it.") # Prints a string
+target.close() # Closes the file assigned to the target variable
+
+# ex17
+
+from sys import argv # From the system imports the argument variable
+from os.path import exists # From 
+
+script, from_file, to_file = argv
+
+print(f"Copying from {from_file} to {to_file}")
+
+in_file = open(from_file)
+indata = in_file.read()
+
+print(f"The input file is {len(indata)} bytes long")
+
+print(f"Does the output file exist? {exists(to_file)}")
+print("Ready, hit RETURN to continue, CTRL-C to abort.")
+input()
+
+out_file = open(to_file, 'w')
+out_file.write(indata)
+
+print('Alright, all done.')
+
+out_file.close()
+in_file.close()
+
+# Written as one line?
+# out_file = open(to_file, 'w').write(open(from_file).read())
