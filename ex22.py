@@ -299,28 +299,48 @@ target.close() # Closes the file assigned to the target variable
 # ex17
 
 from sys import argv # From the system imports the argument variable
-from os.path import exists # From 
+from os.path import exists # From the system import the exists function which can be used to determine if an item (file/variable/etc.) exists in the script/system/program
 
-script, from_file, to_file = argv
+script, from_file, to_file = argv # Assigns the script name, the file with information (from_file) and the file without information to transfer/copy to (to_file)
 
-print(f"Copying from {from_file} to {to_file}")
+print(f"Copying from {from_file} to {to_file}") # Prints a formatted string that includes the from_file name and to_file name.
 
-in_file = open(from_file)
-indata = in_file.read()
+in_file = open(from_file) # Assigns the open from_file to in_file
+indata = in_file.read() # Assigns in_file in read mode to the variable indata
 
-print(f"The input file is {len(indata)} bytes long")
+print(f"The input file is {len(indata)} bytes long") # Prints a formatted string that includes the length of the variable indata in bytes
 
-print(f"Does the output file exist? {exists(to_file)}")
-print("Ready, hit RETURN to continue, CTRL-C to abort.")
-input()
+print(f"Does the output file exist? {exists(to_file)}") # Prints a formatted string that includes whether to_file exists using the exists function
+print("Ready, hit RETURN to continue, CTRL-C to abort.") # Prints a string
+input() # Prompts the user/viewer to input information
 
-out_file = open(to_file, 'w')
-out_file.write(indata)
+out_file = open(to_file, 'w') # Creates a variable and assigns it the open file to_file in write mode ('w')
+out_file.write(indata) # Takes out_file and writes the information from indata to it
 
-print('Alright, all done.')
+print('Alright, all done.') # Prints a string
 
-out_file.close()
-in_file.close()
+out_file.close() # Closes the out_file
+in_file.close() # Closes the in_file
 
 # Written as one line?
 # out_file = open(to_file, 'w').write(open(from_file).read())
+
+# ex18
+
+def print_two(*args): # Creates a function (def=define) and names it, including an argument parameter within the parenthesis
+	arg1, arg2 = args # Defines args
+	print(f"arg1: {arg1}, arg2: {arg2}") # Completes the function by printing a formatted string that prints arg1 and what was passed through and arg2 and what was passed through
+
+def print_two_again(arg1, arg2): # Creates a function (def=define) and names it, including two argument parameters within the parenthesis
+	print(f"arg1: {arg1}, arg2: {arg2}") # Completes the function by printing a formatted string that prints arg1 and what was passed through and arg2 and what was passed through
+
+def print_one(arg1): # Creates a function (def=define) and names it, including one argument parameter within the parenthesis
+	print(f"arg1: {arg1}") # Completes the function by printing a formatted string that prints arg1 and what was passed through
+
+def print_none(): # Creates a function (def=define) and names it, no argument is included here
+	print("I got nothin'.") # Completes the function by printing a string
+
+print_two("Zed", "Shaw") # Calls the function and passes in two arguments that are strings
+print_two_again("Zed", "Shaw") # Calls the function and passes in two arguments that are strings
+print_one("First!") # Calls the function and passes in an argument that is a string
+print_none() # Calls the function
