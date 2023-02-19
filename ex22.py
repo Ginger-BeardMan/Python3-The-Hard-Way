@@ -347,62 +347,66 @@ print_none() # Calls the function
 
 # ex19
 
+# Creates a function named cheese_and_crackers which takes in two arguments then prints four strings, two are formatted to include the arguments passed in to the function
 def cheese_and_crackers(cheese_count, boxes_of_crackers):
 	print(f"You have {cheese_count} cheeses!")
 	print(f"You have {boxes_of_crackers} boxes of crackers!")
 	print("Man that's enough for a party!")
 	print("Get a blanket.\n")
 
-print("We can just give the function numbers directly:")
-cheese_and_crackers(20,30)
+print("We can just give the function numbers directly:") # Prints a string
+cheese_and_crackers(20,30) # Calls the function, passing in two values for the arguments
 
-print("OR, we can use variables from our script:")
-amount_of_cheese = 10
-amount_of_crackers = 50
+print("OR, we can use variables from our script:") # Prints a string
+amount_of_cheese = 10 # Creates a variable and assigns a value
+amount_of_crackers = 50 # Creates a variable and assigns a value
 
-cheese_and_crackers(amount_of_cheese, amount_of_crackers)
+cheese_and_crackers(amount_of_cheese, amount_of_crackers) # Calls the function, passing in the new variables amount_of_cheese and amount_of_crackers
 
-print("We can even do math inside too:")
-cheese_and_crackers(10+20, 5+6)
+print("We can even do math inside too:") # Prints a string
+cheese_and_crackers(10+20, 5+6) # Calls the function, passing in two arguments that are equations
 
-print("And we can combine the two, variables and math:")
-cheese_and_crackers(amount_of_cheese + 100, amount_of_crackers + 1000)
+print("And we can combine the two, variables and math:") # Prints a string
+cheese_and_crackers(amount_of_cheese + 100, amount_of_crackers + 1000) # Calls the function, passing in two arguments that are equations that use variables and values
 
 # ex20
 
-from sys import argv
+from sys import argv # From the system, import the argument variable
 
-script, input_file = argv
+script, input_file = argv # Indicating the script name and input_file are assigned to the argument variable
 
+# Creates a function, print_all, that prints the variable, a file, in read form 
 def print_all(f):
 	print(f.read())
 
+# Creates a function, rewind, that takes a file, the argument, and sets the files current position to absolute, 0, the 'offset'
 def rewind(f):
 	f.seek(0)
 
-def print_a_line(line_count, f):
+# Creates a function, print_a_line, that takes two arguments, line_count and the file, and prints the line_count as a value and the line of the file as a string
+def print_a_line(line_count, f): 
 	print(line_count, f.readline())
 
-current_file = open(input_file)
+current_file = open(input_file) # Creates a variable, current_file, and assigns it the input_file in open mode
 
-print("First let's print the whole file:\n")
+print("First let's print the whole file:\n") # Prints a string
 
-print_all(current_file)
+print_all(current_file) # Calls the function print_all
 
-print("Now let's rewind, kind of like a tape.")
+print("Now let's rewind, kind of like a tape.") # Prints a string
 
-rewind(current_file)
+rewind(current_file) # Calls the function rewind
 
-print("Let's print three lines:")
+print("Let's print three lines:") # Prints a string
 
-current_line = 1
-print_a_line(current_line, current_file)
+current_line = 1 # Creates a variable and assigns it a value
+print_a_line(current_line, current_file) # Calls the function print_a_line and passes in the arguments current_line and current_file
 
-current_line = current_line + 1
-print_a_line(current_line, current_file)
+current_line = current_line + 1 # Creates a variable and assigns it it's current value plus 1
+print_a_line(current_line, current_file) # Calls the function print_a_line and passes in the arguments current_line and current_file
 
-current_line = current_line + 1
-print_a_line(current_line, current_file)
+current_line = current_line + 1 # Creates a variable and assigns it it's current value plus 1
+print_a_line(current_line, current_file) # Calls the function print_a_line and passes in the arguments current_line and current_file
 
 # ex21
 
