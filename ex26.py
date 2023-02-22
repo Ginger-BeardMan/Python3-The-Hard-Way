@@ -1,3 +1,5 @@
+# This exercise was to correct faulty code given by Zed A Shaw in Python 3 the Hard Way
+
 from sys import argv
 
 script, filename = argv
