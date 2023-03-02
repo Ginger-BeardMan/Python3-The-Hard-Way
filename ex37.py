@@ -13,14 +13,31 @@
 	#		break
 	#	print(i) 
 
-class
+# class - an object constructor. Used to create an overarching class with sub characteristics. 
+	# class Person:
+		# def __init__(self, age, weight, height):
+			# self.age = age
+			# self.weight = weight
+			# self.height = height
 
-continue
+	# user = Person(20, 100, 200)
+
+	# print(user.age)
+
+# continue - used to skip a specific iteration in a for or while loop and move on to the next iteration.
+	# for i in range(9):
+		# if i == 3:
+			# continue
+		# print(i)
 
 # def - define an object, typically used to define a function
 	# def this_function():
 
-del
+# del - used to delete objects (i.e. anything in python)
+	# x = 'hello'
+	# del x
+	# print(x)
+	# results in an error that x is not defined
 
 # elif - used in an if statement, stands for else-if. Will be used if the if statement contains more than two contingencies.
 	# if power = on:
@@ -35,7 +52,11 @@ del
 	# except:
 	# 	print("An exception occurred")
 
-exec
+# exec - executes any length of specified python code
+	# x = 'name = "John"\nprint(name)'
+	# exec(x)
+
+	# exec(object, global, locals)
 
 # finally - indicates a condition to run with a try except block. This code will be executed whether there is an error or not when running try
 	# try:
@@ -53,7 +74,14 @@ exec
 # from - from (location a) get a function/operator/etc.
 	# from sys import argv (from the system import the argument variable to use in this script)
 
-global
+# global - used to declare a variable within a function (which would normally be local to that function only) as usable outside of that function once that function has been called
+	# def myfunction():
+	# 	global x
+	# 	x = 'hello'
+	#
+	# myfunction()
+	#
+	# print(x)
 
 # if - a type of conditional statement. If a condition is True then the script written after the condition will run. 
 	# if jeans == 'blue':
@@ -66,20 +94,36 @@ global
 	# for x in dresser:
 		# print(x)
 
-is
+# is - used to test of two variables refer to the same object. It returns True or False (even if the objects are 100% equal which would used the == operator instead of is)
+	# x = ['apple', 'banana', 'cherry']
+	# y = x
+	# print(x is y)
 
-lambda
+# lambda - a small anonymous function that takes in any number of arguments but only has one expression.
+	# x = lambda a: a + 10
+	# print(x(5))
+	# in this example 'lambda' is substituted with 'x'
 
-not
+# not - a logical operator. Returns True if the statement is False, returns False if the statement is True
 
-or
+# or - used in boolean statements to measure if one condition/statement/etc. OR a second condition/statement/etc. is True
+	# True or True == True
+	# True or False == True
+	# False or True == True
+	# False or False == False
 
-pass
+# pass - used as a placeholder in loops instead of leaving blank code (since you cannot have blank code in loops)
+	# for x in [0, 1, 2]:
+	# 	pass
 
 # print - takes what is passed in to it and displays it on the screen/console/etc.
 	# print('Hello') will display Hello
 
-raise
+# raise - a keyword used to define or raise an exception. It allows you to indicate what kind of error to raise and the text to print to the user. 
+	# x = 'hello'
+
+	# if not type(x) is int:
+	#   raise TypeError('Only integers are allowed')
 
 # return - used in a function to call back to something within the function, the function itself again, or to a different function/variable outside of the current function.
 
