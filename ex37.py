@@ -1,3 +1,5 @@
+# PART 1
+
 # and - used to test two statements. Returns True if both are True, False if one is False, and False if both are False 
 
 # as - used to create an alias
@@ -146,3 +148,29 @@
 
 # yield - when called returns a generator. A generator is an iterator, like a list, however, a generator can only be called once unlike a list.
 	# I'm not sure of the use of this and why it would be used
+
+
+# PART 2 - Data Types
+
+True # created by comparing two conditions, either True v False or other conditions that could be True or False. True or False == True
+False # created by comparing two conditions, either True v False or other conditions that could be True or False. False and True == False
+None # no value
+bytes # stores bytes x = b'hello'
+strings # sentences/phrases/quotes, 'My name is Jon-Jon'
+numbers # straight numbers without decimals, 1, 6, 999, 3243253256
+floats # numbers with decimals, 3.4, 55.24, etc.
+lists # mylist = [name, weight, age, height]
+dicts # stores a key=value mapping of things, e = {'x': 1, 'y': 2}
+
+# Part 3 - String Escape Sequences
+
+# \\ # will allow one backslash in a string wherever it is placed
+# \' # will keep a single quotation mark in a string where placed, used to make sure that the string is not broken when a single quotation mark is used within it
+# \" # will keep a double quotation mark in a string where placed, used to make sure that the string is not broken when a double quotation mark is used within it
+# \a # returns the ASCII bell character in python
+# \b # will remove the space/character directly behind it when put in a string
+# \f # formfeed f string 
+# \n # puts the section of the string that follows it on a new line
+# \r # resets the position of the cursor to the beginning of a new line of text. print('hello \rworld') will print world as the cursor resets and world is printed over hello
+# \t # tabs/indents a string
+# \v # vertical tab
