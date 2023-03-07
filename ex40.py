@@ -24,7 +24,7 @@ class MyStuff(object):
 	def apple(self):
 		print("I AM CLASSY APPLES!")
 
-# instantiating (creating) a class (this is done after creating the class MyStuff)
+# instantiating (creating) a class (this is done after creating the class MyStuff since this is like a mini-import)
 
 thing = MyStuff()
 thing.apple()
