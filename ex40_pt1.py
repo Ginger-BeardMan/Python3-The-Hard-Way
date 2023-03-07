@@ -14,6 +14,20 @@ happy_bday = Song(["Happy birthday to you",
 bulls_on_parade = Song(["They rally around tha family",
 	"With pockets full of shells"])
 
+iron_man = Song(["Has he lost his mind?",
+	"Can he see of is he blind",
+	"Can he walk at all",
+	"Or, if he moves, will he fall?"])
+
+cowboys = Song(["Here we come, reach for your gun",
+	"and you better listen well, my friend",
+	"you see, it's been slow down below",
+	"aimed at you, we're the Cowboys from Hell"])
+
 happy_bday.sing_me_a_song()
 
 bulls_on_parade.sing_me_a_song()
+
+iron_man.sing_me_a_song()
+
+cowboys.sing_me_a_song()
